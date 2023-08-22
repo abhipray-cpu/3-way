@@ -1,0 +1,130 @@
+body{
+    width:100vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left: 0;
+    overflow: hidden;
+    background-color: #111111;
+}
+#navigation{
+width:100vw;
+height:10vh;
+display: grid;
+grid-template-columns: 20vw 80vw;
+}
+#logo{
+    margin-left:4vw;
+    margin-top:2.5vh;
+}
+#logo svg{
+    float: left;
+}
+#logo h3{
+    float: left;
+    color: var(--seconday, #F4F4F4);
+font-family: Oxygen;
+font-size: 36px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top:2vh;
+margin-left:.7vw;
+}
+#navbar{
+    padding-left:40vw;
+    display: flex;
+    flex-direction: row;
+    padding-top:3.5vh;
+}
+#navbar h3{
+    color: var(--seconday, #F4F4F4);
+text-align: center;
+font-feature-settings: 'clig' off, 'liga' off;
+
+/* Text single/200/Regular */
+font-family: DM Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px; /* 100% */
+margin-left:1.5vw;
+margin-right:1.5vw;
+cursor: pointer;
+}
+#nav-btn{
+border-radius: 30px;
+background: var(--grad-1, linear-gradient(180deg, #BAEF58 0%, #79B509 100%));
+width:160px;
+height:40px;
+margin-top:0.75vh;
+margin-left:2vw;
+cursor: pointer;
+padding:0px;
+}
+#nav-btn h3{
+width:140px;
+margin-left:10px;
+margin-top:12px;
+color: var(--primary, #111);
+}
+#box{
+    width:40vw;
+    margin-left:30vw;
+    margin-top:15vh;
+    height:50vh;
+    border-radius: 27.586px;
+border: 1.6px dashed var(--seconday, #F4F4F4);
+background: var(--primary, #111);
+}
+#box svg{
+    margin-top:12vh;
+    margin-left:17.6vw;
+}
+#btn-2{
+    width:20vw;
+    margin-left:10vw;
+    height:44px;
+    border-radius: 40px;
+background: var(--grad-1, linear-gradient(180deg, #BAEF58 0%, #79B509 100%));
+cursor: pointer;
+margin-top:2vh;
+    margin-bottom:0px;
+}
+#btn-2 h3{
+    line-height: 44px;
+    text-align: center;
+}
+#btn-2 svg{
+    float: right;
+    margin-top:-49px;
+    margin-right:4.5vw;
+}
+#drag{
+    text-align: center;
+    color: var(--seconday, #F4F4F4);
+    font-weight: 400;
+}
+#instructions{
+    margin-top:10vh;
+}
+#instructions ul{
+    width:40vw;
+    display: flex;
+    flex-direction: row;
+    list-style-type:disc;
+    width:30vw;
+    margin-left:2.95vw;
+}
+.options{
+    color: var(--extra, #E0DDD6);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
+    margin-left:1vw;
+    margin-right:1vw;
+}
