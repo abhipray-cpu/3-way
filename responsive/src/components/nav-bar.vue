@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decrackle</title>
-    <link rel="stylesheet" href="./query.css">
-</head>
-<body>
+<template>
     <div id="navigation">
         <div id="logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="56" viewBox="0 0 35 56" fill="none">
@@ -40,36 +32,90 @@
             <h3>FAQs</h3>
             <h3>How to Use</h3>
             <h3>Support</h3>
-            <div id="nav-btn">
+            <div id="nav-btn" @click="redirect">
                 <h3>Join the Waitlist</h3>
             </div>
         </div>
      
     </div>
-    <div id="box">
-        <h2>Send your Query</h2>
-        <div id="row-1">
-            <div class="input-1">
-                <h4>First Name</h4>
-                <input type="text" id="first" name="first" placeholder="Don">
-            </div>
-            <div class="input-1">
-                <h4>Last Name</h4>
-                <input type="text" id="last" name="last" placeholder="Joe">
-            </div>
-           
-        </div>
-        <div class="input-2">
-            <h4>Email</h4>
-            <input type="email" id="email" name="email" placeholder="johndoe@gmail.com">
-        </div>
-        <div class="input-2">
-            <h4>Content</h4>
-            <input type="text" id="content" name="content" placeholder="You query....">
-        </div>
-        <div id="btn">
-            Send
-        </div>
-    </div>
-</body>
-</html>
+</template>
+
+<script>
+export default {
+    methods:{
+        redirect(){
+            this.$router.push({name:'waitlist'})
+        }
+    }
+}
+</script>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Ingrid+Darling&family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Ingrid+Darling&family=Oxygen&display=swap');
+#navigation{
+    width:100vw;
+    height:10vh;
+    display: grid;
+    grid-template-columns: 20vw 80vw;
+    }
+    #logo{
+        margin-left:4vw;
+        margin-top:2.5vh;
+    }
+    #logo svg{
+        float: left;
+    }
+    #logo h3{
+        float: left;
+        color: var(--seconday, #F4F4F4);
+    font-family: Oxygen;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top:2vh;
+    margin-left:.7vw;
+    }
+    #navbar{
+        padding-left:40vw;
+        display: flex;
+        flex-direction: row;
+        padding-top:3.5vh;
+    }
+    #navbar h3{
+        color: var(--seconday, #F4F4F4);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    
+    /* Text single/200/Regular */
+    font-family: DM Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 100% */
+    margin-left:1.5vw;
+    margin-right:1.5vw;
+    cursor: pointer;
+    }
+    #nav-btn{
+    border-radius: 30px;
+    background: var(--grad-1, linear-gradient(180deg, #BAEF58 0%, #79B509 100%));
+    width:160px;
+    height:40px;
+    margin-top:0.75vh;
+    margin-left:2vw;
+    cursor: pointer;
+    padding:0px;
+    }
+    #nav-btn h3{
+    width:140px;
+    margin-left:10px;
+    margin-top:12px;
+    color: var(--primary, #111);
+    font-family: DM Sans;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+    }
+</style>
